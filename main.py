@@ -5,10 +5,14 @@ from keep_alive import keep_alive
 
 client = discord.Client()
 load_dotenv()
+pfp = './barry.png'
+fp = open(pfp, 'rb')
+pic = fp.read()
 
 
 @client.event
 async def on_ready():
+    await client.user.edit(avatar=pic)
     print('We have logged in as {0.user}'.format(client))
 
 
