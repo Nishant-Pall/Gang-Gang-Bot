@@ -28,5 +28,12 @@ async def on_message(message):
         await message.channel.send('Hi everyone, gang gang here again, lets have a round of applause for Señor nangu <@304619196925607938>')
 
 
+    if message.content.startswith('$badmaash'):
+        await message.channel.send('yo yo waddup gang gang, kanna vich baali, hrktaa badmaasha aali, naam <@470170364320808980>')
+
+    if message.content.startswith('$help'):
+        await message.channel.send('gang gang here with the list shit of you can play with: $gang, $senor, $badmaash, $help')
+
+
 keep_alive()
 client.run(os.getenv('TOKEN'))
